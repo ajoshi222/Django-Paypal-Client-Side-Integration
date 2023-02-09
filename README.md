@@ -2,7 +2,9 @@
 
 
                                                     HOME SCREEN 
-[Screenshot 2023-02-09 122123](https://user-images.githubusercontent.com/69758727/217745205-3bab0acf-75ce-43d9-8089-23d8e921d464.png)
+                                                    ![Screenshot 2023-02-09 122123](https://user-images.githubusercontent.com/69758727/217761213-fa37cb99-7b9b-48e4-b7fd-f82bfc21d841.png)
+
+[ 
 
 
                                                     PAYPAL PAYMENT SIDE
