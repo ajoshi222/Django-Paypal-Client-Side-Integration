@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Checkout</title>
+    <meta
+      id="meta"
+      name="viewport"
+      content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"
+    />
+  </head>
+  <body>
+    <h1>Simple Checkout</h1>
+    <div id="paypal-button-container"></div>
+
+    <script src="https:www.paypal.com/sdk/js?client-id=Aa8i1PJSUarBm5SLO_ZeNiOmU0-y96smspNrHd5DvgaWBB-gjewLjx51oaHmSH9qpsBj9MdW2aUrGOU_&currency=USD"></script>
+
+    <script>
+      paypal
+        .Buttons({
+          //set up transaction
+
+          createOrder: function (data, actions) {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: "1.01",
+                  },
+                },
+              ],
+            });
+          },
+
+          //Finalize transtion
+          onApprove: function (data, actions) {
+            return actions.order.capture().then(function (details) {
+              //show a success completed
+              alert(
+                "Transaction completed by" + details.payer.name.given_name + "!"
+              );
+            });
+          },
+        })
+        .render("#paypal-button-container");
+    </script>
+  </body>
+</html>
